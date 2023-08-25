@@ -1,7 +1,11 @@
 import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part '{{name.snakeCase()}}_state.dart';
+@freezed
+class {{name.pascalCase()}}State with _${{name.pascalCase()}}State {
+  const factory {{name.pascalCase()}}State.initial() = _Initial;
+}
+
 part '{{name.snakeCase()}}_cubit.freezed.dart';
 
 class {{name.pascalCase()}}Cubit extends Cubit<{{name.pascalCase()}}State> {

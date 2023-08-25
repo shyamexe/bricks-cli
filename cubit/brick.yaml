@@ -13,6 +13,6 @@ vars:
     prompt: Please enter the cubit name.
   style:
     type: string
-    description: The style of bloc generated.  basic,equatable,freezed
+    description: The style of bloc generated.
     default: basic
-    prompt: What is the bloc style?
+    prompt: What is the bloc style? (basic,equatable,freezed)
