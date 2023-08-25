@@ -1,8 +1,21 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 
-part '{{name.snakeCase()}}_state.dart';
+class {{name.pascalCase()}}State extends Equatable {
+  const {{name.pascalCase()}}State();
+
+  @override
+  List<Object> get props => [];
+}
+
+class {{name.pascalCase()}}Initial extends {{name.pascalCase()}}State {}
+
+class {{name.pascalCase()}}Loading extends {{name.pascalCase()}}State {}
+
+class {{name.pascalCase()}}Success extends {{name.pascalCase()}}State {}
+
+class {{name.pascalCase()}}Failure extends {{name.pascalCase()}}State {}
 
 class {{name.pascalCase()}}Cubit extends Cubit<{{name.pascalCase()}}State> {
-  {{name.pascalCase()}}Cubit() : super(const {{name.pascalCase()}}State());
+  {{name.pascalCase()}}Cubit() : super(const {{name.pascalCase()}}Initial());
 }
