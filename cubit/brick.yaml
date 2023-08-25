@@ -12,11 +12,7 @@ vars:
     default: counter
     prompt: Please enter the cubit name.
   style:
-    type: enum
-    description: The style of cubit generated.
+    type: String
+    description: The style of bloc generated.  basic,equatable,freezed
     default: basic
-    prompt: What is the cubit style?
-    values:
-      - basic
-      - equatable
-      - freezed
+    prompt: What is the bloc style?
