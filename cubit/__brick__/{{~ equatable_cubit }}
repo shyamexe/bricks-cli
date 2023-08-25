@@ -17,5 +17,5 @@ class {{name.pascalCase()}}Success extends {{name.pascalCase()}}State {}
 class {{name.pascalCase()}}Failure extends {{name.pascalCase()}}State {}
 
 class {{name.pascalCase()}}Cubit extends Cubit<{{name.pascalCase()}}State> {
-  {{name.pascalCase()}}Cubit() : super(const {{name.pascalCase()}}Initial());
+  {{name.pascalCase()}}Cubit() : super({{name.pascalCase()}}Initial());
 }
