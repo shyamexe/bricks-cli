@@ -12,7 +12,7 @@ vars:
     default: counter
     prompt: What is the bloc name?
   style:
-    type: String
+    type: string
     description: The style of bloc generated.  basic,equatable,freezed
     default: basic
     prompt: What is the bloc style?
