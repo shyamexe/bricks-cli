@@ -12,11 +12,8 @@ vars:
     default: counter
     prompt: What is the bloc name?
   style:
-    type: enum
-    description: The style of bloc generated.
+    type: String
+    description: The style of bloc generated.  basic,equatable,freezed
     default: basic
     prompt: What is the bloc style?
-    values:
-      - basic
-      - equatable
-      - freezed
+      
