@@ -1,3 +1,7 @@
 bricks:
   flutter-template:
       path: flutter-template
+  bloc:
+      path: bloc
+  cubit:
+      path: cubit
