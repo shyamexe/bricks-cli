@@ -1,51 +1,86 @@
 # Mason bricks 🧱
 
-[Mason](https://pub.dev/packages/mason_cli) reusable bricks.
+[Mason](https://pub.dev/packages/mason_cli) reusable bricks for efficient project scaffolding.
 
 ## Getting started 🚀
 
 ### Adding a brick 🧱️
 
-To add a brick, use any of the following commands:
+To add a brick, you have a few options:
 
 ```sh
-# 🎯 Activate from https://pub.dev
+# 🎯 Activate Mason CLI (if not done already):
+
 dart pub global activate mason_cli
+```
+```sh
+# Add a brick from a Git URL:
 
-# add from git url
 mason add <BRICK_NAME> --git-url https://github.com/shyamexe/bricks-cli --git-path path/to/<BRICK_NAME>
+```
+```sh
+# Add a brick globally from a Git URL:
 
-# add from git url (global)
 mason add -g <BRICK_NAME> --git-url https://github.com/shyamexe/bricks-cli --git-path path/to/<BRICK_NAME>
+```
+```sh
+# For instance, to add the flutter-package brick:
 
-# example to add flutter_package brick
 mason add -g flutter-package --git-url https://github.com/shyamexe/bricks-cli --git-path flutter-template/
 ```
 
-## Bricks ✨
+## Available Bricks ✨
 
 | name                                       | description                                                                 |
 | ------------------------------------------ | --------------------------------------------------------------------------- |
-| [`dart-package`](https://github.com/shyamexe/bricks-cli/tree/main/flutter-template) | Create a new Flutter project with basic structure|
+| [`flutter-package`](https://github.com/shyamexe/bricks-cli/tree/main/flutter-template) | Create a new Flutter project with basic structure|
+| [`bloc`](https://github.com/shyamexe/bricks-cli/tree/main/bloc) | Generate a new Bloc|
+| [`cubit`](https://github.com/shyamexe/bricks-cli/tree/main/cubit) | Generate a new Cubit|
 
-
-### flutter-template installation 
+### flutter-template  Brick Installation 
 
 ```sh
-# add flutter-template from github
+# Add flutter-template from GitHub
 mason add -g flutter-template --git-url https://github.com/shyamexe/bricks --git-path flutter-template
 
-# list all globally installed bricks
+# List all globally installed bricks
 mason ls -g
 
-# ⚡We can generate code via
+# Generate code using the brick
 mason make flutter-template
 
-# remove brick (global)
+# Remove the brick (global)
 mason remove -g flutter-template
-
 
 ```
 
+### bloc/cubit Installation 
 
+```sh
+# Globally add cubit brick from GitHub
+mason add -g cubit --git-url https://github.com/shyamexe/bricks --git-path cubit
 
+# Generate a new Cubit
+mason make cubit --name counter --style equatable
+
+```
+#### To load the brick inside your project:
+
+1 Create mason/mason.yaml in your project root:
+
+```yaml
+bricks:
+  cubit:
+    git:
+      url: https://github.com/shyamexe/bricks-cli.git
+      path: cubit
+
+```
+
+2 Run the following commands:
+
+```sh
+mason get
+
+mason make cubit -o ..\Yoru\output\folder\  --name counter --style equatable
+```
