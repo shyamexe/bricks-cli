@@ -1,0 +1,13 @@
+name: feature-block
+description: Generate a new feature block.
+version: 0.0.1
+
+environment:
+  mason: ">=0.1.0-dev.32 <0.1.0"
+
+vars:
+  name:
+    type: string
+    description: The name of the feature block.
+    default: counter
+    prompt: What is the feature block name?

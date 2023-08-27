@@ -5,3 +5,5 @@ bricks:
       path: bloc
   cubit:
       path: cubit
+  feature-block:
+      path: feature-block
