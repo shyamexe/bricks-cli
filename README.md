@@ -36,6 +36,8 @@ mason add -g flutter-package --git-url https://github.com/shyamexe/bricks-cli --
 | [`flutter-package`](https://github.com/shyamexe/bricks-cli/tree/main/flutter-template) | Create a new Flutter project with basic structure|
 | [`bloc`](https://github.com/shyamexe/bricks-cli/tree/main/bloc) | Generate a new Bloc|
 | [`cubit`](https://github.com/shyamexe/bricks-cli/tree/main/cubit) | Generate a new Cubit|
+| [`feature-block`](https://github.com/shyamexe/bricks-cli/tree/main/feature-block) | Generate a new module block|
+
 
 ### flutter-template  Brick Installation 
 
