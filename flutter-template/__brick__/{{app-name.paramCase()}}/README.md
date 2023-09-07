@@ -1,4 +1,4 @@
-# {{app-name}}
+# {{app-app-name.paramCase()}}
 
 {{description}}
 
