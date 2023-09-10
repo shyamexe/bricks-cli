@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class name extends StatelessWidget {
-  const name({key});
+class {{name.pascalCase()}} extends StatelessWidget {
+  const {{name.pascalCase()}}({key});
 
   @override
   Widget build(BuildContext context) {
