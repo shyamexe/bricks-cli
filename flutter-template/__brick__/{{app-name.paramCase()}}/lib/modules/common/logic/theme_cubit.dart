@@ -15,16 +15,26 @@ class ThemeState extends Equatable {
   @override
   List<Object> get props => [theme];
 
-  Map<String, dynamic> toMap() {
-    return <String, ThemeMode>{
-      'theme': theme,
+Map<String, dynamic> toMap() {
+    return <String, String>{
+      'theme': theme.name,
     };
   }
 
-  factory ThemeState.fromMap(Map<String, ThemeMode> map) {
-    return ThemeState(
-      map['theme']??ThemeMode.system ,
-    );
+  factory ThemeState.fromMap(Map<String, dynamic> map) {
+    if (map['theme'] == ThemeMode.dark) {
+      return const ThemeState(
+        ThemeMode.dark,
+      );
+    } else if (map['theme'] == ThemeMode.light) {
+      return const ThemeState(
+        ThemeMode.light,
+      );
+    } else {
+      return const ThemeState(
+        ThemeMode.system,
+      );
+    }
   }
 
   String toJson() => json.encode(toMap());
