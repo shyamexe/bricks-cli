@@ -26,7 +26,7 @@ mason add -g <BRICK_NAME> --git-url https://github.com/shyamexe/bricks-cli --git
 ```sh
 # For instance, to add the flutter-package brick:
 
-mason add -g flutter-package --git-url https://github.com/shyamexe/bricks-cli --git-path flutter-template/
+mason add -g flutter-template --git-url https://github.com/shyamexe/bricks --git-path flutter-template
 ```
 
 ## Available Bricks ✨
