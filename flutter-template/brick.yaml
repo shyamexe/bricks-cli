@@ -1,6 +1,6 @@
 name: flutter-template
 description: A Simple flutter temp
-version: 0.0.3
+version: 0.0.4
 vars:
   - app-name
   - package-name
